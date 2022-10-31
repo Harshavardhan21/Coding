@@ -47,13 +47,29 @@ ll power(ll a, ll b)
 
 void solve()
 {
+    int n;
+    cin >> n;
+    vi arr(n);
+    loop(i, n) cin >> arr[i];
+    int target;
+    cin >> target;
+    unordered_set<int> temp;
+    for (int i = 0; i < n; i++)
+    {
+        int diff = target - arr[i];
+        if (temp.count(diff))
+        {
+            cout << diff << " " << arr[i] << endl;
+        }
+        temp.insert(arr[i]);
+    }
 }
 
 int main()
 {
 #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("../../input.txt", "r", stdin);
+    freopen("../../output.txt", "w", stdout);
 #endif
     solve();
     return 0;
