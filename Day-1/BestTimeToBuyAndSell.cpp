@@ -60,6 +60,7 @@ void solve()
         maxi = max(maxi, diff);
     }
     cout << maxi << endl;
+    cout<<endl;
 }
 
 int main()
